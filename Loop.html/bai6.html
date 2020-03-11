@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let n=+prompt('nhap n')
+       let number = n;
+       let i=0;
+       let phandu;
+       let tong=0;
+       for(;n>=Math.pow(10,i);i++)
+       {}
+       while(n>0)
+       {
+           phandu=n%10
+           n=(n-phandu)/10
+           tong=tong+Math.pow(phandu,i)
+       }
+       if(tong==number)
+        document.write('Yes')
+       else
+       document.write('No')
+    </script>
+</body>
+</html>
