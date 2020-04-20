@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="myNumber" placeholder="nhập số nhị phân" onkeypress="return nhap(event)">
+
+
+
+    <button onclick="myFunction()">change</button>
+
+
+    <p id="demo">kết quả chuyển qua thập phân</p>
+
+    <script>
+        function nhap(evt) {
+            if (evt.keyCode == 48 || evt.keyCode == 49) {
+                return true;
+            } else return false;
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myNumber").value;
+            Change(x)
+
+            function Change(so) {
+                let sum = 0
+                for (let i = 0; i < so.length; i++) {
+                    sum += so[i] * Math.pow(2, so.length - 1 - i)
+                }
+                document.getElementById("demo").innerHTML = sum
+            }
+
+
+
+            ;
+        }
+    </script>
+
+</body>
+
+</html>
