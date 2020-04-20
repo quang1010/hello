@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="a" onclick="m()">change</button>
+    <input type="text" name="" id="b">
+
+
+    <p id="d"></p>
+    <script>
+        function m() {
+            let x = document.getElementById("b").value;
+            let phanDu;
+            let chuoi = '';
+
+
+            while (x > 0) {
+                phanDu = x % 2;
+
+                x = (x - phanDu) / 2
+                chuoi += phanDu
+
+            }
+            for (let i = 0; i < chuoi.length; i++) {
+                document.getElementById("d").innerHTML += chuoi[chuoi.length - i - 1]
+            }
+        }
+    </script>
+</body>
+
+</html>
